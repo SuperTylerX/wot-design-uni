@@ -1,5 +1,6 @@
 import { baseProps, makeArrayProp, makeBooleanProp, makeNumberProp, makeNumericProp, makeStringProp } from '../common/props'
 import type { FormItemRule } from '../wd-form/types'
+import type { InputConfirmType, InputType } from '@uni-helper/uni-app-types'
 
 export type InputClearTrigger = 'focus' | 'always'
 
@@ -47,7 +48,7 @@ export const inputProps = {
   /**
    * 设置键盘右下角按钮的文字，仅在type='text'时生效，可选值：done / go / next / search / send
    */
-  confirmType: makeStringProp('done'),
+  confirmType: makeStringProp<InputConfirmType>('done'),
   /**
    * 点击键盘右下角按钮时是否保持键盘不收起
    */
@@ -59,7 +60,7 @@ export const inputProps = {
   /**
    * 类型，可选值：text / number / digit / idcard
    */
-  type: makeStringProp('text'),
+  type: makeStringProp<InputType>('text'),
   /**
    * 原生属性，最大长度
    */

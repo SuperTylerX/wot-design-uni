@@ -28,12 +28,13 @@ export default {
 import { computed, ref } from 'vue'
 import { addUnit, isDef, objToStyle } from '../common/util'
 import { imgProps } from './types'
+import { type ImageOnErrorEvent, type ImageOnLoadEvent } from '@uni-helper/uni-app-types'
 
 const props = defineProps(imgProps)
 const emit = defineEmits<{
-  (e: 'error', event: Event): void
+  (e: 'error', event: ImageOnErrorEvent): void
   (e: 'click', event: MouseEvent): void
-  (e: 'load', event: Event): void
+  (e: 'load', event: ImageOnLoadEvent): void
 }>()
 
 const rootStyle = computed(() => {
@@ -57,7 +58,7 @@ const rootClass = computed(() => {
 
 const status = ref<'loading' | 'error' | 'success'>('loading')
 
-function handleError(event: Event) {
+function handleError(event: ImageOnErrorEvent) {
   status.value = 'error'
   emit('error', event)
 }
@@ -69,7 +70,7 @@ function handleClick(event: MouseEvent) {
   }
   emit('click', event)
 }
-function handleLoad(event: Event) {
+function handleLoad(event: ImageOnLoadEvent) {
   status.value = 'success'
   emit('load', event)
 }

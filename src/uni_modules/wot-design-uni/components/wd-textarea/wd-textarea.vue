@@ -105,7 +105,7 @@ const placeholderValue = computed(() => {
 const clearing = ref<boolean>(false)
 const focused = ref<boolean>(false) // 控制聚焦
 const focusing = ref<boolean>(false) // 当前是否激活状态
-const inputValue = ref<string | number>('') // 输入框的值
+const inputValue = ref<string>('') // 输入框的值
 const cell = useCell()
 
 watch(
@@ -213,7 +213,7 @@ function initState() {
   emit('update:modelValue', inputValue.value)
 }
 
-function formatValue(value: string | number) {
+function formatValue(value: string) {
   const { maxlength, showWordLimit } = props
   if (showWordLimit && maxlength !== -1 && String(value).length > maxlength) {
     return value.toString().substring(0, maxlength)

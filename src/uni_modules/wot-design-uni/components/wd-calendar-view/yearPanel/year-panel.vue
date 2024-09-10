@@ -36,6 +36,7 @@ import { compareYear, formatYearTitle, getYears } from '../utils'
 import { isArray, isNumber, requestAnimationFrame } from '../../common/util'
 import Year from '../year/year.vue'
 import { yearPanelProps, type YearInfo, type YearPanelExpose } from './types'
+import { type ScrollViewOnScrollEvent } from '@uni-helper/uni-app-types'
 
 const props = defineProps(yearPanelProps)
 const emit = defineEmits(['change'])
@@ -95,11 +96,11 @@ function scrollIntoView() {
   })
 }
 
-const yearScroll = (e: Event) => {
+const yearScroll = (e: ScrollViewOnScrollEvent) => {
   if (years.value.length <= 1) {
     return
   }
-  const scrollTop = Math.max(0, (e.target as Element).scrollTop)
+  const scrollTop = Math.max(0, e.target!.scrollTop)
   doSetSubtitle(scrollTop)
 }
 

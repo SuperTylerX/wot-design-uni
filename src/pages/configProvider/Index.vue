@@ -66,10 +66,9 @@
         />
       </wd-cell-group>
       <wd-cell-group custom-class="group" title="其他信息" border>
-        <wd-input
+        <wd-textarea
           label="活动细则"
           label-width="100px"
-          type="textarea"
           v-model="content"
           :maxlength="300"
           show-word-limit

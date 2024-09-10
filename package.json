@@ -88,6 +88,7 @@
     "@types/node": "^18.14.6",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
+    "@uni-helper/uni-app-types": "1.0.0-alpha.3",
     "@vant/area-data": "^1.4.1",
     "@vant/touch-emulator": "^1.4.0",
     "@vue/runtime-core": "^3.2.45",

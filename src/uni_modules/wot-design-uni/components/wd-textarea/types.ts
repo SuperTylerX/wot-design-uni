@@ -29,7 +29,7 @@ export const textareaProps = {
    * * 绑定值。
    * 类型：string | number
    */
-  modelValue: makeNumericProp(''),
+  modelValue: makeStringProp(''),
 
   /**
    * * 占位文本。
@@ -113,7 +113,7 @@ export const textareaProps = {
    * 默认值：'done'
    * 可选值有'done', 'go', 'next', 'search', 'send'
    */
-  confirmType: makeStringProp<ConfirmType | null>(null),
+  confirmType: makeStringProp<ConfirmType | undefined>(undefined),
 
   /**
    * * 点击键盘右下角按钮时是否保持键盘不收起。

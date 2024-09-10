@@ -1,4 +1,4 @@
-import { baseProps, makeBooleanProp, makeNumericProp, makeStringProp } from '../common/props'
+import { baseProps, makeBooleanProp, makeNumberProp, makeStringProp } from '../common/props'
 
 export const searchProps = {
   ...baseProps,
@@ -56,7 +56,7 @@ export const searchProps = {
    * 类型: string / number
    * 默认值: -1
    */
-  maxlength: makeNumericProp(-1),
+  maxlength: makeNumberProp(-1),
 
   /**
    * placeholder 居左边

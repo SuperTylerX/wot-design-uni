@@ -104,7 +104,7 @@ export const swiperProps = {
    * 类型：number 或 string（数字或可转换为数字的字符串）
    * 默认值：'0'
    */
-  nextMargin: makeNumericProp('0'),
+  nextMargin: makeStringProp('0'),
 
   /**
    * 页码信息展示位置，可选值：'bottom'（底部）等
@@ -118,7 +118,7 @@ export const swiperProps = {
    * 类型：number 或 string（数字或可转换为数字的字符串）
    * 默认值：'0'
    */
-  previousMargin: makeNumericProp('0'),
+  previousMargin: makeStringProp('0'),
 
   /**
    * 是否应用边距到第一个、最后一个元素

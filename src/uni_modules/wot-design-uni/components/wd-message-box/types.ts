@@ -8,6 +8,7 @@
  * 记得注释
  */
 import { baseProps } from '../common/props'
+import { type InputType } from '@uni-helper/uni-app-types'
 
 export type MessageType = 'alert' | 'confirm' | 'prompt'
 
@@ -49,7 +50,7 @@ export type MessageOptions = {
   /**
    * 当type为prompt时，输入框类型
    */
-  inputType?: string
+  inputType?: InputType
   /**
    * 当type为prompt时，输入框初始值
    */
